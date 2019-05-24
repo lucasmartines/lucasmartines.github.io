@@ -1,0 +1,245 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+			position:relative ;
+			font-family: sans-serif;
+		}
+		 html{
+		 	scroll-behavior: smooth;
+		 	background-color:#ddd;
+		 }
+		 .container{
+		 	display:flex;
+		 	 
+		 
+			justify-content: center;
+			height: auto;
+		 }
+		 #app{
+		 	margin-top: 50px;
+		 	height: auto;
+		 	background-color:white;
+		 }
+		 .app_header{
+		 	padding:5px 20px;
+		 	background-color: #eee;
+		 	min-width:340px;
+		 }
+		 .app_controll{
+		 	display:flex;
+		 	width:100%;
+		 }
+		 .app_controll input{
+		 	width:80%;
+		 	padding-left:20px;
+		 }
+		 .app_controll button{
+		 	width:20%;
+		 	padding:10px;
+		 }
+		 .lista div{
+		 	padding: 15px 15px;
+		 }
+		 .app_header button{
+		 	background-color: green;
+		 	color:white;
+		 	padding:3px;
+		 	border:none;
+		 	border-radius: 4px;
+
+		 }
+		  .app_header button:hover{
+		 	background-color:yellow;
+		 	color:black;
+		 	 
+		 }
+	</style>
+</head>
+<body>
+	<div class="container">
+	 	<div id="app">
+	 		<div class="app_header">
+	 			<h1 class="lista_titulo"> Minha Lista com Cookies</h1>
+	 			<button onclick="revert_list()"> Revert </button>
+	 			<button onclick="save_list()"> Salvar</button>
+	 			<button onclick="load_list()"> Carregar</button>
+	 		</div>
+	 		<div class="app_controll">
+	 			<input id="input" type="text" placeholder="texto"  >
+	 			<button onclick="insert_into_list(this)" dt_target="input">Click</button>
+	 		</div>
+
+	 		<div class="lista">
+	 		</div>
+	 		
+	 	</div>
+ 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+	
+
+	<script>
+
+		var lista_compras = [];
+		//var compra = { nome: "" , preço: 0};
+		var contador = 0;
+		ultimo = null;
+
+		/**
+		* insere elemento em uma lista de compras 
+		* e apaga o campo de inserção
+		* então apaga os elementos da lista de componentes html
+		* e por fim os recria e incrementa o contador
+		*/
+		function insert_into_list(el){
+			id_input_of_list = $(el).attr("dt_target");
+			input_field = $("#"+id_input_of_list);
+
+			contador = lista_compras.length;
+ 
+
+		 	lista_compras.push( {nome:input_field.val(), _id: contador   } );
+			
+
+			input_field.val("");
+	
+
+			reset();
+
+			 gerarElementos();
+			 contador ++;
+
+		}
+		function save_list(){
+			Cookies.set( "lista" , lista_compras );
+			alert("Lista salva");
+		}
+		function load_list(){
+			lista_compras = JSON.parse( Cookies.get("lista") );
+			update_list();
+		}
+		function revert_list(){
+			reset();
+			
+			lista_compras.reverse();
+
+			gerarElementos();
+
+		}
+		function update_list(){
+			reset();
+			gerarElementos();
+		}
+		/** gera todos os elementos html de acordo com seus valores
+		* da lista de compras
+		*/
+		function gerarElementos(){
+			 // para cada compra pas da lista de compra
+			 // gere um elemento html visual
+			 // passando o id e o nome da lista de compra para o html
+			lista_compras.forEach(
+				function(el){
+					inserirCompra( el.nome , el._id );
+				}
+			);	
+ 
+		}
+		// gera um elemento html com nome e id dos elementos da lista
+		// configurado com callback e ajustes de lista
+		// configura também o botão para que ele receba o id e o paragrafo
+		// para receber o nome, assim o botão de deletar pode saber quem
+		// deletar na lista de compras pelo id 
+		function inserirCompra(nome,id){
+			lista = $(".lista");
+				
+			novoElemento = $("<div>");
+			novoElemento.append($("<p/>",{html:nome}));
+				
+			var deletador = $("<button>" , {"id" : id , "class":"deletador"});
+
+			deletador.text("Deletar");
+
+			//deletar da lista de compras
+			deletador.click( 
+				function (  ){	
+					
+					// pegue o atributo id 
+					var id = $(this).attr("id");
+			 		
+					
+					// deletar o elemento meio do id
+ 					delete lista_compras[id];
+
+ 					//REMOVER O ELEMENTO ACIMA DO ARRAY
+					 lista_compras = lista_compras.filter(function( _compra, i, array){
+					 	
+					 	// REMOVER O ELEMENTO VASIO
+					 	return _compra != null;
+					 	
+					 });
+					 // CORRIGIR O INDICE DO ARRAY PARA QUE CORRESPONDA
+					 // COM O _id DOS BOTÕES
+					 lista_compras.forEach(function( _compra , i){
+					 	_compra._id = i ;
+					 });
+					
+
+					 //REMOVE OS ELEMENTOS DESATUALIZADOS
+					reset();
+					
+					gerarElementos();
+
+				}
+			);
+
+			// adiciona o botão no novo elemento que será
+			// inserido na lista
+			novoElemento.append( deletador  );
+			lista.append(novoElemento);
+
+				
+		}
+		/**
+		* REMOVE TODOS OS ELEMENTOS DIV DA .LISTA 
+		*/
+		function reset(){
+			 
+			$(".lista div").remove();
+		}
+
+		// ADICIONAR CALLBACK PARA O BOTÃO ENTER NO CAMPO DE INPUT
+		$(document).ready(function(){
+
+			$(".app_controll #input").keydown( 	function ( ev ){
+				
+				if( ev.key == "Enter"){
+		 		  	input_field = $("#input");
+
+ 			//	input_field = $("#"+id_input_of_list);
+				
+					contador = lista_compras.length;
+
+				 	lista_compras.push( {nome:input_field.val() , _id : contador} );
+					input_field.val("");
+
+
+					reset();
+
+					gerarElementos();
+					 
+		 		}
+
+			});
+		});
+		
+		
+	</script>
+</body>
+</html>
