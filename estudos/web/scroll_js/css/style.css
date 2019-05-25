@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  position: relative;
+  font-family: Helvetica, sans-serif; }
+
+/*
+    transform: translateY(-300vh);
+    transition: all 1s;
+*/
+.container-img .img {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.container-img .navbar {
+  position: absolute;
+  top: 0;
+  background-color: rgba(163, 8, 8, 0.897);
+  z-index: 2;
+  width: 100%; }
+  .container-img .navbar .nav-items {
+    display: flex; }
+  .container-img .navbar .nav-items a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 20px 25px; }
+  .container-img .navbar .nav-items a:hover {
+    background-color: rgba(44, 14, 175, 0.897); }
+
+.img {
+  background-image: url("/img/cidade-rua.jpg"); }
+  .img .img-inner {
+    padding-top: 14rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    z-index: 5 !important; }
+    .img .img-inner h1 {
+      transform: translateY(5px); }
+    .img .img-inner h1, .img .img-inner h2, .img .img-inner h3, .img .img-inner h4, .img .img-inner h5, .img .img-inner h6 {
+      text-decoration: underline;
+      z-index: 3; }
+    .img .img-inner p {
+      padding-top: 1.3rem;
+      font-size: 20px; }
+
+.img-2 {
+  background-image: url("/img/cidade-noite.jpg"); }
+
+.img-3 {
+  background-image: url("/img/cidade-noite-2.jpg"); }
+
+.img-4 {
+  background-image: url("/img/cidade-ponte.jpg"); }
+
+.img-5 {
+  background-image: url("/img/cidade-arvore.jpg"); }
+
+@media (max-width: 480px) {
+  .container-img {
+    text-align: center; } }
+
+.no-decoration {
+  text-decoration: none;
+  list-style: none; }
+
+.big-button {
+  padding: 20px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3ed43e;
+  font-size: 22px;
+  color: white;
+  display: block;
+  cursor: hand; }
+
+.big-button:hover {
+  background-color: #298829; }
+
+h1 {
+  font-size: 80px !important; }
+
+h2 {
+  font-size: 60px; }
+
+h3 {
+  font-size: 40px; }
+
+h4 {
+  font-size: 20px; }
+
+h5 {
+  font-size: 18 px; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  color: #f1f1f1; }
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(28, 28, 41, 0.31);
+  content: ""; }
+
+h1 {
+  color: #f1f1f1; }
+
+@media (max-width: 480px) {
+  .container {
+    overflow-y: auto; } }
