@@ -14,10 +14,10 @@ var appName = "scroll";
     var tempo_transicao = 2;
     // serve para setar e desligar o time-out
     var _timer ;
-    limitScroll.max = document.getElementsByClassName("img").length - 1;
+    limitScroll.max = document.getElementsByClassName("img").length ;
 
 window.onresize = function(){
-    if( innerWidth > 500 ){
+    if( innerWidth > 600 ){
         block_scroll = false;
       //  document.querySelector(".container-img").style.marginTop = ( 1000 * sroll ) + "vh";
         document.querySelector(".container-img").style.marginTop = 0;
