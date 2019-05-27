@@ -1,0 +1,117 @@
+html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    background: #f4f9ff;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    display:block;
+}
+
+/*CLASSES UTILITARIAS*/
+.w-100{
+    width: 100%;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.f-left{
+    float:left;
+}
+.f-right{
+    float:right;
+}
+.clearfix::after, .clearfix::before{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+
+
+/*NAV BAR*/
+.nav{
+    background-color:#4C6C85;
+    padding:32px 0 16px 0;
+    text-align:center;
+    color:white;
+    font-style: italic;
+}
+.nav h1{
+
+    font-size:2.2em;
+    color: #FCDA84;
+    position:relative;
+    font-weight: lighter;
+}
+.nav h1::after{
+    content:"";
+    display:block;
+    width:64px;
+    height: 2px;
+    background-color:#FCDA84;
+    margin: 8px auto;
+    opacity: 0.4;
+ 
+}
+a{
+    font-size:1.3em;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 183, 0);
+}
+.nav p{
+    font-size:1.25em;
+}
+
+/*CONTEUDO MAIN*/
+main > h2, main > h1, main > h3 , main > h4{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    color: #4C6C85;
+    font-weight: lighter;
+    font-size:2.5em;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+
+/*SECTION DE PROJETOS*/
+.projetos-item h3, .projetos-item h2{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.35em;
+    color: #4C6C85;
+    padding: 0 0 16px 0px;
+}
+.projetos-item{
+    /*MARGIN DE 32 ESQ E 10 DIR */
+    margin: 0 10px 0 32px;
+
+    
+}
+.projetos-item img{
+    /*MARGIN DE 32 ESQ E 10 DIR */
+    float:left;
+    width:41.6666%;
+    padding: 0 10px  ;
+    margin: 16px 0;
+    display: block;
+}
+.projetos-info{
+    margin: 18px 0;
+    float:left;
+    width: 58.3333%;
+    padding: 0 10px;
+}
+.projetos-info > a{
+    margin: 8px 0 16px 0;
+}
+@media( max-width:739px){
+  
+    .projetos-item img , .projetos-info{
+        width:100%;
+    }
+}

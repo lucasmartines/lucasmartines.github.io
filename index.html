@@ -3,66 +3,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Scroll Fantastico</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/style.css" rel="stylesheet">
+   
+   
 </head>
 <body>
- 
-
-    <div class="container">
-        <div class="container-img">
-            <nav class="navbar">
-                <div class="nav-items">
-                    <a href="/"> Home </a>
-                    <a href="https://lucasalcantarilla97.000webhostapp.com"> Portifólio </a>
-                    <a href="#"> Terceiro Link </a>
-                </div>
-            </nav>
-            <div class="img img-1">
-               <div class="img-inner">
-                    <h1>Efeito de scroll</h1>
-                    <p> Estudo Maluco de efeito Scroll utilizando o recurso wheel e event listener</p>
-                  <!-- <a href="#" class="no-decoration"><button class="big-button"  > Conheça-nos</button></a> -->
-                  <button class="big-button">    <a class=" no-decoration" href="#" > Conheça-nos</a> </button>
-                </div>
-            </div>
-            <div class="img img-2">
-                    <div class="mask"> </div>
-                    <div class="img-inner" >
-                        <h2 >Poder</h2>   
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptate, totam saepe aliquid reprehenderit dolore a consequuntur voluptatum alias quaerat quos accusantium voluptas omnis accusamus. Laudantium sit architecto perferendis ex!</p>
-                    </div>
-                
-                
-            </div>
-            <div class="img img-3">
-                <div class="mask"> </div>
-                <div class="img-inner" >
-                    <h2 >Astucia </h2>   
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptate, totam saepe aliquid reprehenderit dolore a consequuntur voluptatum alias quaerat quos accusantium voluptas omnis accusamus. Laudantium sit architecto perferendis ex!</p>
-                </div>
-            </div>
-            <div class="img img-4">
-                <div class="mask"> </div>
-                <div class="img-inner" >
-                    <h2 > Loucura </h2>   
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptate, totam saepe aliquid reprehenderit dolore a consequuntur voluptatum alias quaerat quos accusantium voluptas omnis accusamus. Laudantium sit architecto perferendis ex!</p>
-                </div>
-            </div>
-            <div class="img img-5">
-                <div class="mask"> </div>
-                <div class="img-inner" >
-                    <h2 > Magia </h2>   
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptate, totam saepe aliquid reprehenderit dolore a consequuntur voluptatum alias quaerat quos accusantium voluptas omnis accusamus. Laudantium sit architecto perferendis ex!</p>
-                </div>
-                <footer>
-                        <p style="text-align: center"> Criado por Lucas Martines</p>
-                </footer>
-            </div>
-            
-        </div>
+    
+    <div class="nav w-100">
+        <nav class="container">
+            <h1> Lucas Martines</h1>
+            <p> Estudos Simples</p>
+        </nav>
     </div>
+    
 
-    <script src="./js/main.js"></script>
+    <main class="container">
+        <h2> Estudos Simples </h2>
+        <section class="projetos">
+            <div class="projetos-item clearfix">
+                    <img src="./img/brafe.png" alt="Imagem que rerepesta o site brafé feito no curso origamid">
+                    <div class="projetos-info f-left">
+                        <h3> Estudo-Criação do Site Brafé</h3>
+                        <p> Estudo de layout e interface utilizando meios tradicionais, sem uso 
+                            de grid </p>
+                        <a href="./estudos/web/brafe_ls/index.html"> Site Brafe </a>
+                    </div>
+            </div> 
+
+            <div class="projetos-item clearfix">
+                <img src="./img/scroll.png" alt=" Imagem do site scroll que represena o site verdadeiro">
+                <div class="projetos-info f-left">
+                    <h3> Uso dos scroll down</h3>
+                    <p> Estudo de javascript para criar um scroll basico </p>
+                    <a href="./estudos/web/scroll_js/index.html"> Scroll </a>
+                </div>
+            </div>
+            <div class="projetos-item clearfix">
+                    <img src="./img/coockies.png" alt=" Imagem biscoito que representa coockies">
+                   <div class="projetos-info f-left ">
+                        <h3> Lista Cookies e javascript puro!</h3>
+                        <p> Estudo do recurso de lista e uso de cookies</p>
+                        <a href="./estudos/web/lista_js/lista.html"> Lista</a>
+                    </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
