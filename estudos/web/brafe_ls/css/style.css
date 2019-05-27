@@ -37,11 +37,38 @@ body{
     float:right;
     margin-right: 10px;
 }
+.menu-nav-toggler{
+    display:none;
+}
 /*tudo que é menor que 740*/
 @media (max-width:739px){
     .menu-nav  {
         float:none;
         clear:both;
+        position:relative;
+    }
+    .menu-container{
+        display:relative;
+    }
+    #menu-toggle-items li{
+        display:block;
+    }
+    #menu-toggle-items {
+        display:none;
+    }
+    #menu-toggle-items.toggle{
+        display:block; 
+    }
+    #menu-nav-toggler{
+        background-color:transparent; color:white;
+        border:none;   
+        cursor:hand;
+        display:block;
+        right:0; position:absolute;
+    }
+    #menu-nav-toggler img{
+        height: 31px; width:auto; background-color:white;
+        padding:2px; border-radius: 2px;
     }
 }
 .menu-nav li {
