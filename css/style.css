@@ -131,6 +131,7 @@ main > h2, main > h1, main > h3 , main > h4{
 }
 /*FOOTER */
 .footer{
+    margin-top:32px;
     padding:32px 0 16px 0;
     text-align:center;
     background-color: #4C6C85;
