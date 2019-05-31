@@ -129,6 +129,21 @@ main > h2, main > h1, main > h3 , main > h4{
         position:static;
     }
 }
+/*FUNDO DA IMAGEM*/
+.background-image{
+    background: #010B0D;
+    background-image:url("../img/background.png");
+    content:"";
+    height: 250px;
+    background-size:contain;
+    margin-top:-5px;
+    background-repeat: no-repeat;
+}
+@media( max-width:639px){
+    .background-image{
+        background-size: cover;
+    }
+}
 /*FOOTER */
 .footer{
     margin-top:32px;
