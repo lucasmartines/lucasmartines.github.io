@@ -18,6 +18,7 @@ html{
     max-width: 960px;
     margin: 0 auto;
 }
+ 
 .f-left{
     float:left;
 }
@@ -128,6 +129,10 @@ main > h2, main > h1, main > h3 , main > h4{
     .projetos-info{
         position:static;
     }
+    .container{
+        margin: 0 20px;
+    }
+    
 }
 /*FUNDO DA IMAGEM*/
 .background-image{
