@@ -256,12 +256,16 @@ h2.produtos-mineiro::before{
 }
 @media(max-width:739px){
     .produtos-container{
-        max-width:500px;
+        width:100%;
     }
     .produtos-item{
-        width:480px;
+        width: 100%;
     }
-     
+    .sobre-item{
+        width:100%;
+ 
+    }
+   
 }
 .locais{
     max-width:960px;
@@ -432,7 +436,7 @@ font-family:georgia,sans-serif;
         
     }
     .assine-container form{
-        width:460px;
+        width:100%;
         float:none;
     }
     .assine-info{
@@ -440,7 +444,7 @@ font-family:georgia,sans-serif;
         float:none;
     }
     .assine-container > form button{
-        width:40%;
+        width:30%;
     }
     .assine-container > form input{
         width:60%;
