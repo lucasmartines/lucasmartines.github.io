@@ -136,7 +136,7 @@ img{
     .nav-main-container a{
         
         padding: 5px 3px;
-        height: 24;
+        height: 24px;
     }
     .nav-main-container form{
         margin-bottom: 10px
@@ -151,7 +151,7 @@ img{
         padding: 9px 0;
     }
      .navbar-left{
-        height: 160px;
+        height: 150px;
           transition: all 0.5s;
     }
     .navbar-left.close{
