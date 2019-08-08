@@ -229,11 +229,25 @@
         </main>
     </div>
 
+    <!--JANELA MODAL-->
+    <div class="fundo-modal">
+        <div class="janela-modal">
+            <div class="body-modal">
+                <div>
+                    <h2> Meu Contato</h2>
+                    <a href="#" class="btn btn-primary"> Whatsapp: 966342284</a>
+                </div>
+                <button class='change-modal' class="btn btn-primary" onclick="ShowHideModal()"> X </button>
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM "></script>
     <script>
+        /*EFEITOS DE ANIMAÇÃO ON SCREEN*/
         if ('IntersectionObserver' in window) {} else {
             document.querySelectorAll(".invisible").forEach(i => i.classList.remove("invisible"))
         }
@@ -287,6 +301,18 @@
         checkForWindowView(".habilidades .item_habilidades", ".habilidades", "fadeInDown", 350)
         checkForWindowView(".conhecimento-container .conhecimento", ".conhecimento-container", "fadeInLeft", 250)
         checkForWindowView(".mapa_container .info, .mapa_container p, .mapa_container button", ".mapa_container .info", "fadeinLeft", 150)
+
+        /*FIM EFEITOS DE ANIMAÇÃO ON SCREEN*/
+
+        // button .btn 
+        let modal = document.querySelectorAll("button.btn");
+
+        function ShowHideModal(e) {
+            let element = document.querySelector(".fundo-modal")
+            element.classList.toggle("active-modal")
+            console.log("do it")
+        }
+        modal.forEach(e => e.addEventListener("click", ShowHideModal))
     </script>
 </body>
 

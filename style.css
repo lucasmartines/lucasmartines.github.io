@@ -409,4 +409,61 @@ ul {
 .mapa_container button {
   margin: 20px 0;
 }
+
+.fundo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00000049;
+  opacity: 0;
+  z-index: -1;
+}
+
+.fundo-modal .janela-modal {
+  padding: 48px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: fixed;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background: white;
+  z-index: 5;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.363);
+          box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.363);
+}
+
+.fundo-modal .janela-modal .change-modal {
+  margin: 0 auto;
+  right: 0;
+  position: absolute;
+  top: 0;
+  padding: 10px 15px;
+  font-size: 30px;
+  border-top-right-radius: 10px;
+  border: 0px;
+  z-index: 15;
+}
+
+.fundo-modal .janela-modal .change-modal:hover {
+  background: red;
+  color: white;
+}
+
+.active-modal {
+  opacity: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  z-index: 10;
+}
+
+.active-modal .janela-modal {
+  top: 150px;
+}
 /*# sourceMappingURL=style.css.map */
