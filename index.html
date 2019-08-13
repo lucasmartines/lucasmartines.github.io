@@ -246,9 +246,9 @@
             <div class="body-modal">
                 <div>
                     <h2> Meu Contato</h2>
-                    <a href="#" class="btn btn-primary"> Whatsapp: 966342284</a>
+                    <a href="#" class=""> Whatsapp: 966342284</a>
                 </div>
-                <button class='change-modal btn btn-primary'  onclick="ShowHideModal()"> X </button>
+                <button class='change-modal btn btn-primary'  > X </button>
             </div>
         </div>
     </div>
@@ -321,12 +321,13 @@
         // button .btn 
         let modal = document.querySelectorAll("button.btn");
 
-        function ShowHideModal(e) {
-            let element = document.querySelector(".fundo-modal")
-            element.classList.toggle("active-modal")
-            console.log("do it")
-        }
-        modal.forEach(e => e.addEventListener("click", ShowHideModal))
+        // function ShowHideModal(e) {
+        //     let element = document.querySelector(".fundo-modal")
+        //     element.classList.toggle("active-modal")
+        //     console.log(element)
+        // }
+
+        modal.forEach( e => e.addEventListener("click", (e)=> document.querySelector(".fundo-modal").classList.toggle("active-modal") ) ) 
     </script>
 </body>
 
