@@ -1,0 +1,16 @@
+.navbar-show {
+  height: 156px !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/*link > a*/
+.link:hover a {
+  height: 92%;
+  display: block;
+}
+
+#nav_link_toggler {
+  display: none;
+}
+/*# sourceMappingURL=navbar.css.map */

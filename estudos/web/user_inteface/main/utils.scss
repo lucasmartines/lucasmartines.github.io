@@ -1,0 +1,163 @@
+.d-block{
+    display: block;
+}
+
+.d-flex{
+    display: flex !important;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+.align-flex-right{
+    text-align: right;
+    
+}   
+.z-1{
+    z-index: 1;
+}
+.z-2{
+    z-index: 2;
+}
+.z-3{
+    z-index: 3;
+}
+
+.mr-auto{
+    margin-right: auto;
+}
+.ml-auto{
+    margin-left: auto;
+}
+.float-left{
+    float:left;
+}
+.float-right{
+    float: right;
+}
+.float-clear{
+    float:both;
+}
+.img_64{
+    width:64px;
+}
+.img_40{
+    width:40px;
+}
+
+.w1-3{
+    width:32%;
+}
+.w1-2{
+    width:50%;
+}
+.w1-4{
+    width:25%;
+}
+.w1-6{
+    width:16.6666%;
+}
+
+.row{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: row; 
+}
+.row.padding{
+    padding: 0.8em 1em;
+}
+.justify-center{
+    justify-content: center;
+}
+.wrap{
+    flex-wrap: wrap;    
+}
+
+.button{
+    padding: 5px;
+    cursor:pointer;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    border: none;
+
+
+    &-primary{
+        background: rgb(59, 136, 207);
+        color:white;
+    } 
+    &-blue { 
+        background: rgb(173, 59, 207);
+        color:white;
+    }
+    &-secondary{
+        background: rgb(207, 59, 59);
+        color:white;
+    }
+    &-red{
+        background: rgb(250, 40, 40);
+        color:white;
+    }
+}
+
+.info-card{
+    padding: 10px;
+
+    &-primary{
+        background: rgb(59, 136, 207);
+        color:white;
+    } 
+    &-blue { 
+        background: rgb(173, 59, 207);
+        color:white;
+    }
+    &-secondary{
+        background: rgb(207, 59, 59);
+        color:white;
+    }
+    &-red{
+        background: rgb(250, 40, 40);
+        color:white;
+    }
+}
+
+.primary{
+    background: rgb(59, 136, 207);
+    color:white;
+} 
+.blue { 
+    background: rgb(173, 59, 207);
+    color:white;
+}
+.secondary{
+    background: rgb(207, 59, 59);
+    color:white;
+}
+.c_red{
+    color: rgb(250, 40, 40)!important;
+}
+.c_primary{
+    color: rgb(59, 136, 207)!important;
+} 
+.c_blue { 
+    color: rgb(173, 59, 207)!important;
+}
+.c_secondary{
+    color: rgb(207, 59, 59)!important;
+}
+
+
+
+@media(max-width:700px){
+    .row{
+        flex-wrap: wrap;
+    }
+    .w1-3{
+        width:100%;
+    }
+    .w1-2{
+        width:100%;
+    }
+    .w1-4{
+        width:100%;
+    }   
+}   

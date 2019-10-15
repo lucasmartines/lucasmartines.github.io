@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./main/home.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Document</title>
+    
+
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- <script src="/ui/js/Highcharts-7.2.0/code/modules/exporting.js"></script>
+    <script src="/ui/js/Highcharts-7.2.0/code/modules/export-data.js"></script>
+    <script src="/ui/js/Highcharts-7.2.0/code/modules/accessibility.js"></script> -->
+
+</head>
+<body>
+    <nav class="navbar">
+        <!-- sidebar_size -->
+        <div class="marca sidebar_size_not " >
+            Marca
+        </div>
+        <div class="nav_link_container hidable flex-grow align-flex-right z-1">
+            <button  id="nav_link_toggler">&#9776;</button>
+
+            <ul class="nav_link" id="nav_link">
+                <li class="link">
+                    <a href="#">home</a>
+                </li>
+                <li class="link">
+                    <a href="#">footer</a>
+                </li>
+                <li class="link  mr-auto">
+                    <input type="text" placeholder="pesquisar algo  ">
+                </li>
+                <li class="link ">
+                    <a href="#">bar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-wrapper">
+        <aside class="sidebar_size aside" id="aside">
+            <ul >
+                <li class="sidebar_link toggle">
+                    <button class="sidebar_show_hide dropdown_icon" >
+                    <img src="./img/home.png" class="img_40" alt="">    
+                        Home
+                    </button>
+                    <div class="sidebar_dropdown">
+                        <a href="#">Item 1</a>
+                        <a href="#">Configurar</a>
+                    </div>
+                </li>
+                <li class="sidebar_link toggle">
+                    <button class="sidebar_show_hide dropdown_icon" >
+                        <img src="./img/home.png" class="img_40" alt="">    
+                        Usuarios
+                    </button>
+                    <div class="sidebar_dropdown">
+                        <a href="#">Adicionar Usuario</a>
+                        <a href="#">Configurar Opções</a>
+                        <a href="#">Opções</a>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <div class="left_header">
+                        <button id="sidebar_toggler" class="nav_link_toggler" class="float-left">&#9776;</button>
+                </div>
+                
+                <h1>Dashboard</h1>
+                <!-- <p> -->
+                <div class="right_header">
+                    <button class="button button-primary">teste quantin</button>
+                    <button class="button button-red">teste quantin</button>
+                </div>
+            </header>
+            <div class="content-wrapper">
+<div class="row padding">
+                    <div class="card-info w1-4">
+                        <h2 class="title">
+                            Numero de Trabalhadores
+                        </h2>
+                        <h2 class="info c_red">
+                            
+                                445 
+                            
+                        </h2>
+                    </div>
+                     <div class="card-info w1-4">
+                        <h2 class="title">
+                            Numero de Ajudantes
+                        </h2>
+                        <h2 class="info c_secondary">
+                            
+                                334 
+                            
+                        </h2>
+                    </div>
+                     <div class="card-info w1-4">
+                        <h2 class="title">
+                            Numero de Pesquisadores
+                        </h2>
+                        <h2 class="info c_blue">
+                            
+                                288 
+                            
+                        </h2>
+                    </div>
+                     <div class="card-info w1-4">
+                        <h2 class="title">
+                            Numero de Analistas
+                        </h2>
+                        <h2 class="info c_primary">
+                            
+                                126 
+                            
+                        </h2>
+                    </div>
+                </div>
+                
+                <div class="row padding " >
+                    <div class="card w1-2">
+                        <div class="card-header">
+                            <h3></h3>
+                            <button class="toggler_card">&#9776;</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="grafic" id="container"  >
+
+                            </div>
+                            <script src="./js/js_001.js"></script>
+                        </div>
+                        
+                    </div>
+                    <div class="card w1-4">
+                        <div class="card-header">
+                            <h3> </h3>
+                            <button class="toggler_card">&#9776;</button>
+                        </div>
+                        <div class="card-body" >
+                            <div class="grafic" id="container_2" ></div>
+                        </div>
+                        <script src="./js/js_002.js"></script>
+                    </div>
+                    <div class="card w1-4">
+                        
+                       <div class="card-body">
+                            <h3 > Numero de estudantes</h3>
+                            <br>
+                            <h1 style="font-size:6em;font-weight:lighter">260</h1>
+                            <h3 > Estudantes Ativos</h3>
+                            <br>
+                            <h1 style="font-size:6em;font-weight:lighter">40</h1>
+                       </div>
+                    </div>
+                </div>
+                <div class=" row justify-center">
+                    <div class="card w1-3">
+                        <div class="card-header">
+                            <h3> </h3>
+                            <button class="toggler_card">&#9776;</button>
+                        </div>
+                        <div class="card-body grafic" id="container_3"  >
+                            
+                        </div>
+                        <script src="./js/js_003.js"></script>
+                    </div>
+                    <div class="card w1-3">
+                        <div class="card-header">
+                            <h3> </h3>
+                            <button class="toggler_card">&#9776;</button>
+                        </div>
+                        <div class="card-body">
+                                <div id="container_4" class="grafic"></div>
+                            <script src="./js/js_004.js"></script>
+                        </div>
+                    </div>
+                    <div class="card w1-3">
+                        <div class="card-header">
+                            
+                            <button class="toggler_card">&#9776;</button>
+                        </div>
+                        <div class="card-body">
+                             
+                                <div id="container_5" class="grafic"></div>
+                            <script src="./js/js_005.js"></script>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    footer
+                </footer>
+            </div>
+        </main>
+    </div>
+
+    <script src="./js/toggler.js"></script>
+</body>
+</html>

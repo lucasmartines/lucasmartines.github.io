@@ -1,0 +1,67 @@
+
+/*navbar*/
+.navbar{
+    background:white;
+    
+}
+/**/
+.container-wrapper{
+    background:white;
+    color:black;
+    border-top: 1px solid rgb(209, 209, 209); 
+}
+
+.container-wrapper aside{
+    background:#283339;
+}
+
+.container-wrapper main{
+
+}
+
+.container-wrapper main header{
+
+}
+.container-wrapper main .content{
+    background: #E4E5E7;
+}
+.container-wrapper main footer{
+
+}
+
+.content-wrapper{
+    border-top: 1px solid rgb(209, 209, 209);
+}
+
+
+.container-wrapper main header h1,
+.container-wrapper main header p,
+.container-wrapper main footer{
+    color:black;
+}
+.content,.footer{
+    color:black;
+}
+.navbar a , .navbar div{
+    color:black;
+}
+
+/*botão navbar togler*/
+button.nav_link_toggler{
+    border:1px solid rgb(107, 107, 107);
+    border-radius: 3px;
+    background:transparent;
+    color:black;
+    float: left;
+    margin:8px;
+    padding: 10px!important;
+    
+
+}
+
+input{
+    border-radius: 0.8em;
+    border: 1px solid #222;
+    color:#222;
+    padding: 0.2em 0.6em;
+}

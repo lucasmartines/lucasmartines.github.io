@@ -1,0 +1,19 @@
+
+.navbar-show{
+    height: 156px!important;
+    transition: all 0.5s;
+}
+
+
+/*link > a*/
+.link:hover{
+    a{
+        // background: #222;
+        height: 92%;
+        display: block;
+    }
+}
+
+#nav_link_toggler{
+    display: none;
+}

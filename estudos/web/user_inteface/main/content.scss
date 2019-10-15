@@ -1,0 +1,116 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    
+    margin: 0.2em;
+    position:relative;
+    max-height: 380px;
+
+
+    &-header{ 
+        padding:.5em;
+        text-align: center;
+        
+        button.toggler_card{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+    &-body{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        padding:.5em;
+        min-height: 0;
+        flex-grow: 1;
+        
+
+
+    }
+    &-footer{
+        padding:.5em;
+    }
+}
+
+
+/*STYLUS*/
+.card{
+    //border: 3px solid rgba(0, 0, 0, 0.404);
+    //border-radius: 2em;
+    box-shadow: 2px 2px 2px rgba(51, 51, 51, 0.226);
+    border-radius: 0.5em;
+    
+    &-header{
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        border: 1px solid rgba(194, 191, 191, 0.466);
+        background: rgb(211, 212, 214);
+        h1,h2,h3,h4,h5,h6,p{
+            color: #333;
+        }
+        padding: 10px 10px;
+        content:"";
+        background: rgb(226, 226, 226);
+    }
+    &-body{
+        color:black;
+        background:white;
+        
+        h1,h2,h3,h4,h5,h6,p{
+            color: #333;
+        }
+        padding: 0 8px;
+        border-bottom-left-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;   
+    }
+    &-footer{
+        
+        
+        background: rgb(211, 212, 214);
+        padding: 8px 8px;
+    }
+
+
+}
+.right_header{
+    color:black;
+}
+.grafic{
+    width:100%;
+    margin:0 auto;
+     
+
+} 
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    .title{
+        width:100%;
+        font-size: 1em;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+    .info{
+        font-size: 5em;
+        font-weight: lighter;
+    }
+    margin: 0.2em;
+    position:relative;
+    max-height: 380px;
+
+}
+
+.card-info{
+    box-shadow: 2px 2px 2px rgba(51, 51, 51, 0.226);
+    border-radius: 0.5em;
+    background:white;
+    height: 160px;
+    h1,h2,h3,h4,h5,h6,p{
+        color: #333;
+    }
+}
