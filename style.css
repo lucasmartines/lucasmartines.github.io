@@ -34,11 +34,11 @@ p {
 }
 
 .side img {
-  width: 150px;
+  width: 120px;
   content: "";
   margin: 0 auto;
   display: inline-block;
-  margin: 30px 0;
+  margin: 40px 0 25px;
 }
 
 .side ul {
@@ -48,7 +48,6 @@ p {
 
 .side ul li {
   padding: 5px 0;
-  font-size: 20px;
 }
 
 ul {
