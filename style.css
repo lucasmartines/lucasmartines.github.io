@@ -56,12 +56,6 @@ ul {
   padding: 10px;
 }
 
-@media (max-width: 769px) {
-  .side {
-    width: 150px;
-  }
-}
-
 @media (max-width: 420px) {
   .side {
     margin-left: -150px;
@@ -76,6 +70,9 @@ ul {
 }
 
 @media (max-width: 769px) {
+  .side {
+    width: 150px;
+  }
   .main {
     width: calc(100% - $sidebar_sm_size);
     margin-left: 150px;
@@ -110,8 +107,8 @@ ul {
 .cabecario h3 {
   text-transform: uppercase;
   font-weight: bolder;
-  letter-spacing: 4px;
-  font-size: 2.815em;
+  letter-spacing: 0px;
+  font-size: 2.215em;
 }
 
 @media (max-width: 480px) {
