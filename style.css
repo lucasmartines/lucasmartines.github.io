@@ -44,6 +44,7 @@ p {
 .side ul {
   list-style-type: none;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .side ul li {
@@ -84,6 +85,12 @@ ul {
 @media (max-width: 420px) {
   .main {
     margin-left: 0;
+  }
+  .invisible {
+    opacity: 1;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 
