@@ -333,6 +333,7 @@ header{
 }
 .img-footer-real{
     background: url('img/footer_img_real.png');
+    background-size: cover;
 
 }
 .footer-info-title{
