@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+body{
+    /* background: #323232; */
+    font-family: 'Montserrat';
+}
+html{
+    scroll-behavior: smooth;
+}
+/***
+*=============================================================
+title
+***/
+.title{
+    font-size:18px;
+    font-weight: normal;
+    text-align: center;
+}
+.sub-title{
+    font-size: 18px;
+    margin-top:24px;    
+}
+.mini-description{
+    margin-top:12px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+a{
+    color:white;
+    display: block;
+}
+a:hover{
+    color: #ababab;
+}
+img{
+    width:100%;
+}
+.btn-simple{
+    border: 2px solid #323232;
+    background: transparent;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+@media(max-width:600px){
+    .btn-simple{
+        width:100%;
+    }
+}
+.padding-separador{
+    padding:auto 88px;
+}
+/***
+*container
+*===========================================================
+*/
+.container{
+    max-width:960px;
+}
+/**
+*header
+*=============================================================
+*/
+.navbar-header{
+    background: rgba(0, 0, 0, 0.452);
+}
+header{
+    background: url('./img/image 2.png');
+    background-size:cover;
+    background-position: center center;
+    
+}
+@media( max-width:460px){
+    .portfolio{
+        padding-top:88px;
+    }
+}
+.header-title{
+    color:white;
+    padding-top:150px;
+    font-size: 60px;
+}
+.header-paragraph{
+    color:white;
+    padding-bottom:250px;
+    font-size:24px;
+}
+@media( max-width: 460px){
+    .header-title{
+        padding-top:280px;
+        font-size:24px;
+    }
+}
+
+@media( max-width: 460px){
+    header{
+        max-height: 100vh;
+    }
+}
+/***
+*=====================================================
+/* navbar
+*/
+.navbar-toggler-icon{
+    color:white;
+    margin:5px;
+}
+
+/***
+*about content
+*====================================================
+*/
+.ornament-title::after{
+    display: block;
+    content:"";
+    position: relative;
+    width:180px;
+    height: 1px;
+    background: #bebebe;
+}
+.about-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-session{
+    
+    margin-top:90px;
+    position: relative;
+    /* top: -50%; */
+    margin-top:-10%;
+    
+}
+.container-session{
+    background:white;
+    box-shadow: 0px 60px 60px #32323250;
+    margin-bottom:88px;
+    padding: 40px 10px;
+}
+@media(min-width:576px){
+    .container-session
+    {
+        padding:70px;
+    }
+}
+.about-title
+{
+    font-size:14px;
+    font-weight: bold;
+}
+.about-paragraph
+{
+    font-size: 14px;
+}
+.about-image-container
+{
+    text-align: right;
+}
+@media(max-width: 768px){
+    .about-image-container
+    {
+        text-align: center;
+    }   
+}
+.about-image{
+    max-width:259px;
+}
+/**
+*
+**/
+.simple-title{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.simple-title::after{
+    display: block;
+    content:"";
+    width: 74px;
+    position: relative;
+
+}
+
+/***
+*================================================
+*CONHECIMENTO e habilidades
+*/
+
+.habilidades_session{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top:60px;
+}
+
+@media(min-width:576px){
+    .conhecimento-title-left{
+        text-align: left;   
+    }
+    .conhecimento-title-right{
+        text-align: right;
+    }
+}
+.conhecimento-item-title{
+    font-size:18px;
+    margin-bottom:6px;
+    text-align: left;
+}
+.conhecimento-progress{
+    margin-bottom: 16px;
+}
+.conhecimento-column{
+    padding-bottom:110px;
+    margin-top: 55px;
+}
+@media(min-width:768px){
+    .habilidades_session{
+        padding-bottom:88px;
+    }
+    .conhecimento-item{
+        padding-left:100px;
+    }
+}
+.conhecimento-title{
+    font-size: 24px;
+    margin-bottom: 55px;
+}
+@media(max-width:575px){
+    .conhecimento-title{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }   
+    .conhecimento-column{
+        padding: 0 25px;
+    }
+}
+.progress-bar{
+    background: #8C8C8C;
+}
+.progress{
+    height: 8px;
+    border: 4px;
+    background:#c4c4c4;
+}
+
+/***
+* portfolio  TECNOLOGIA
+*==========================================
+*/
+.portfolio{
+    padding-bottom:88px;
+}
+.image-container{
+    cursor:pointer;
+}
+.portfolio .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 250px;
+}
+.image-container:hover img{
+    width:200%;
+    transition: all .7s ease-in;
+}
+.image-container{
+    transition: all 1s ease-in;
+}
+.tecnologia{
+    background: linear-gradient(0,#353535c0,#000);
+    padding-top:88px;
+    padding-bottom:88px;
+}
+.tecnologia .simple-title{
+    color:white;
+}
+.tecnologia .card-title{
+    font-size: 12px;
+    font-weight: bold;
+}
+.tecnologia .card-paragraph{
+    font-size:12;
+    font-weight: normal;
+}
+.card-tecnologia{
+    padding: 32px 20px !important;
+}
+.tecnologia-container{
+  
+    display: flex;
+   
+}
+
+
+/**
+*FOOTER
+*==================================================================
+*/
+
+.footer-session{
+    padding-top:35px;
+    padding-bottom: 222px;
+    position:relative;
+}
+.footer-title{
+    font-size:24px;
+    color:white;
+    z-index: 2;
+    position: relative;
+}
+@media(min-width:576px){
+    .footer-title{
+        font-size:48px;
+    }
+}
+.img-degrade , .img-footer-real{
+    
+    background-size: cover;
+    content:"";
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom: 0;
+    background-repeat: no-repeat;
+}
+.img-degrade{
+     
+    background: linear-gradient(90deg,#1e2222, #1e22224f);
+    z-index: 1;
+    opacity: 0.50;
+}
+.img-footer-real{
+    background: url('img/footer_img_real.png');
+
+}
+.footer-info-title{
+    font-size: 14;
+    color:white;
+    z-index: 2;
+    position: relative;
+
+}
+.footer-info{
+    font-size:18;
+    font-weight: bold;
+    margin-bottom:18px;
+    color:white;
+    z-index: 2;
+    position: relative;
+}
+
+
+/***
+** contato contato-session
+*===========================================================================
+*/
+.contato{
+    background: linear-gradient(45deg,#454545,#454545ee);
+    padding-top:60px;
+    padding-bottom:60px;
+}
+.contato-session{
+    
+    background: #f5f3f3;
+}
+.contato-item{
+    margin-bottom: 12px;
+}
+.contato-title{
+    margin-bottom:24px;
+}
+.contato-item-name{
+    display: inline-block;
+    font-size:14px;
+    
+}
+@media(min-width:576px){
+    .contato-item-name{
+        width: 100px;
+    }
+}
+.contato-item-data{
+    font-weight: bold;
+    font-size: 14px;
+}
+.contato-session input , .contato-session textarea{
+    margin-bottom: 28px;
+}
+.container-session.contato-session{
+    margin-bottom: 0;
+ 
+}
+@media(min-width:576px){
+    .container-session .contato-session{
+        margin-bottom: 0;
+        padding-bottom: 88;
+    }
+}
+.form-title{
+    margin-top:26px;
+    margin-bottom: 10px;
+}
+.contato-session .form-control{
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid #929292;
+}
+@media( min-width: 576px){
+    .form-title{
+        margin-top:56px;
+        margin-bottom: 20px;
+    }
+}
+@media(max-width:576px){
+    .contato-session,.container-session{
+        margin:0;
+    }
+}
