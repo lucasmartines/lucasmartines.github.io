@@ -7,6 +7,15 @@ body{
 html{
     scroll-behavior: smooth;
 }
+
+.br_only_mobile{
+    display: none;
+}
+@media (max-width:409px){
+    .br_only_mobile{
+        display: block;
+    }
+}
 /***
 *=============================================================
 title
@@ -225,6 +234,10 @@ header{
     font-size: 24px;
     margin-bottom: 55px;
 }
+.conhecimento-title span{
+    display: inline-block;
+    width:32px;
+}
 @media(max-width:575px){
     .conhecimento-title{
         font-size: 20px;
@@ -252,13 +265,44 @@ header{
 }
 .image-container{
     cursor:pointer;
+    position:relative;
+    height: 200px;
+    overflow:hidden;
+}
+.image-container .image-foreground{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    padding:10%;
+    opacity: 0;
+    background: rgba(34, 34, 34, 0.575);
+    transition: 0.1s all ease-in;
+
+}
+.image-container:hover .image-foreground{
+    /* position: absolute; */
+    opacity:1;
+    transition: 0.1s all ease-in;
+    /* background: #222; */
+}
+.image-container:hover{
+    color:white;
+}
+.image-foreground h2{
+    font-size:16px;
+    font-weight: bolder;
+}
+.image-foreground p{
+    font-size:12px;
 }
 .portfolio .image-container{
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    height: 250px;
+ 
 }
 .image-container:hover img{
     width:200%;
@@ -267,6 +311,12 @@ header{
 .image-container{
     transition: all 1s ease-in;
 }
+
+
+/***
+*================================================
+* tecnologia
+*/
 .tecnologia{
     background: linear-gradient(0,#353535c0,#000);
     padding-top:88px;
