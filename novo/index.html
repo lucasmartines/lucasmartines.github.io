@@ -373,7 +373,7 @@
                     </div>
                 </div>
                     <div class="col-12 ">
-                        <form action="/some_url" method="POST">
+                        <div class="form-submit" >
 
                             <h2 class="form-title about-title ornament-title" >
                                 Forumario de Contato
@@ -382,23 +382,28 @@
                                 type="text"
                                 name="nome"
                                 placeholder="Seu Nome"
-                                required>
+                                required
+                                id="form-name">
                             <input class="form-control " 
                                 type="email"
                                 name="email"
                                 placeholder="Email"
-                                required>
+                                required
+                                id="form-email">
                             <textarea class="form-control"
-                                name="conteudo" 
+                                name="content" 
                                 rows="4"
-                                placeholder="Mensagem"></textarea>
+                                placeholder="Mensagem"
+                                required
+                                id="form-content"></textarea>
 
                             <div class="text-right">
-                                <button class="btn btn-simple mb-2 mb-sm-0 ">
+                                <button class="btn btn-simple mb-2 mb-sm-0 " 
+                                        onclick="submitForm()">
                                     Enviar
                                 </button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                    
             </div><!-- ./row -->
@@ -446,8 +451,41 @@
             </div><!-- ./row -->
         </div>
     </footer><!-- footer session -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+    <script>
+
+        function submitForm( )
+        {
+            
+            let name = $("#form-name").val();
+            let email= $("#form-email").val();
+            let content= $("#form-content").val();
+
+            $('.form-submit button').attr('disabled','disabled');
+
+            
+            $.ajax({
+                'method':'POST',
+                 'url':"http://app-estudo-temporario.herokuapp.com/sendEmail",
+                //  'url':"http://127.0.0.1:8000/sendEmail",
+                data:{
+                    'name':name,
+                    'email':email,
+                    'content':content
+                },
+                success: function(response){
+                    alert("Mensagem enviada com sucesso");
+                    $('.form-submit button').removeAttr('disabled');
+                },
+                error: function(response){
+                    alert("Erro ao enviar a mensagem!");
+                    console.log(response)
+                    $('.form-submit button').removeAttr('disabled');
+                }
+            })
+        }
+    </script>
 </body>
 </html>
