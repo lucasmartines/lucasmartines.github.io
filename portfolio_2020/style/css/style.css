@@ -50,6 +50,7 @@ img { object-fit: cover; }
 .habilidades { position: relative; margin-bottom: 70px; }
 .habilidades.--super_mb { margin-bottom: 200px !important; }
 .habilidades .pattern { position: absolute; right: 0px; top: 10%; width: 200px; height: 200px; background: url(/img/pattern2.png); z-index: -2; content: ""; background-size: cover; opacity: .85; }
+.habilidades .pattern--left { left: 0 !important; }
 .habilidades .habilidades__image { display: flex; align-items: center; }
 @media (min-width: 640px) { .habilidades .habilidades__container .title { text-align: left; } }
 .habilidades .habilidades__container .habilidades__description__text { text-align: left; padding: 3px 0 5px 0; }

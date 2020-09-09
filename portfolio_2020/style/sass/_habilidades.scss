@@ -7,6 +7,7 @@
 		margin-bottom: 200px!important;
 	}
 	.pattern{
+
 		position: absolute;
 		right: 0px;
 		top: 10%;
@@ -17,6 +18,10 @@
 		content: "";
 	    background-size: cover;
 	    opacity: .85;
+
+	    &--left{
+			left:0 !important;
+		}
 	}
 
 	.habilidades__image{
