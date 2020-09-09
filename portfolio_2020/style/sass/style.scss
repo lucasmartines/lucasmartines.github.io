@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;800&display=swap');
+
+
+
+
+
+$my_primary:#A43DF4;
+$my_secondary: #6836FF;
+$my_text-dark: #333;
+$my_text-light: white;
+
+body{
+	background: #f8f8f8;
+}
+
+.img--108{
+	width: 108%!important;
+}
+.btn-cta{
+	display: block;
+	background: transparent;
+	color:$my_primary;
+	padding: 15px 30px;
+	border:2px solid $my_primary;
+	border-radius: 10px;
+	transition: 0.3s all ease-in;
+
+	&:hover{
+		color: $my_secondary;
+		border-color: $my_secondary;
+	}
+}
+.btn-my_primary {
+    color: #fff;
+    background-color: $my_primary;
+    border-color: $my_primary;
+    border: 2px solid;
+    &:hover , &:focus , &:active{
+    	color: #333;
+    	background-color: transparent;
+    	border-color:$my_primary;
+    }
+}
+
+.btn-my_secondary {
+    color: #fff;
+    background-color: $my_secondary;
+    border-color: $my_secondary;
+    border: 2px solid;
+    &:hover , &:focus , &:active{
+    	color: #333;
+    	background-color: transparent;
+    	border-color: $my_secondary ;
+    }
+}
+
+*{
+	font-family: Poppins;
+}
+
+.img{
+	width: 100%;
+
+	img{
+		width:100%;
+		object-fit: cover;
+	}
+}
+img{
+	object-fit: cover;
+}
+
+.title{
+	color: $my_secondary;
+	text-align: center;
+
+}
+.title::before{
+	position: absolute;
+	content: "";
+	width: 80px;
+	height: 3px;
+	margin: 5px auto 2px auto;
+	background: $my_primary;
+	top: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.title.title--left::before{
+	@media(min-width:640px){
+		left: 0%;
+		transform: translateX(0%);	
+
+	}
+}
+
+@import "./_header.scss";
+@import "./_sobre-mim.scss";
+@import "./_habilidades.scss";
+@import "./_projetos.scss";
+@import "./_cta-section.scss";
+@import "./_contato.scss";
+@import "./_formulario.scss";
+@import "./_footer.scss";

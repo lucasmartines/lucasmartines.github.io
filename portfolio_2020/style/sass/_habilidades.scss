@@ -1,0 +1,77 @@
+.habilidades{
+
+	position: relative;
+	margin-bottom: 70px;
+
+	&.--super_mb{
+		margin-bottom: 200px!important;
+	}
+	.pattern{
+		position: absolute;
+		right: 0px;
+		top: 10%;
+		width:200px;
+		height: 200px;
+		background: url(/img/pattern2.png);
+		z-index: -2;
+		content: "";
+	    background-size: cover;
+	    opacity: .85;
+	}
+
+	.habilidades__image{
+	    display: flex;
+		align-items: center;
+
+	}
+	.habilidades__container{
+		
+
+		
+		.title{
+			@media ( min-width:640px ){
+				text-align: left;	
+			}	
+		}
+		.habilidades__description__text
+		{
+			text-align: left;
+			padding: 3px 0 5px 0;
+			@media ( max-width:582px ){
+				text-align: center;	
+			}		
+			@media( max-width: 965px){
+				font-size: 1rem;
+			}
+		}
+		.habilidades__description{
+
+		}
+
+		
+
+		.habilidades__description__list{
+			list-style: none;
+
+			@media( max-width: 640px){
+				padding-left: 0;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			li{
+				padding: 10px 0;
+				i{
+					color: $my_primary;
+
+				}
+				&:hover{
+					color: $my_primary;
+					transition: 0.3s all ease-in;
+				}
+			}
+			
+		}
+	}
+
+}

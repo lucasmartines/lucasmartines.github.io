@@ -1,0 +1,31 @@
+.contato{
+	z-index: 2;
+	
+ 	position: fixed;
+
+	ul{
+		position: fixed;
+		right:20px;
+		bottom:0;
+		width: 60px;
+		list-style: none;
+		padding: 0;
+		li{
+			a{
+				display: flex;
+			    justify-content: center;
+			    align-items: center;
+			    margin: 10px;
+			    
+			    width: 40px;
+			     
+			    font-size: 20px;
+			    &:hover{
+			    	text-decoration: none;
+			    	
+			    }
+			}
+
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.cta-section{
+	padding: 20px 0 60px;
+	background: url(/img/bg_basic.png);
+	background-size: cover;
+	background-attachment: fixed;
+	margin-bottom: 0;
+	
+	.cta-section__row{
+		text-align: left;
+
+		.cta-section__row__info{
+
+			.cta-section__title{
+
+				color: $my_primary;
+			}
+			.cta-section__text{
+				color: $my_secondary;
+			}
+			
+		}
+		.cta-section__row__cta{
+			.btn-cta{
+			    margin-left: auto;
+    			
+			}
+		}
+	}
+}

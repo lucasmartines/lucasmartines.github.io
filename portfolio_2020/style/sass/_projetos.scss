@@ -1,0 +1,57 @@
+.projetos__container{
+
+	
+	.projetos
+	{
+		padding-top: 10px;		
+		&:first-children{
+			padding-top: 60px;
+		}
+		
+		min-height: 290px;
+		.card{
+			margin-bottom: 10px;
+			
+			img{
+				max-height: 160px;
+			}
+			h3,h4,h5,h6{
+			    font-size: 14px;
+			}
+			&:hover{
+				.projetos__body{
+					height: 100px;
+					transition: 0.1s all ease-in-out;
+					padding: 10px;
+
+
+				}
+
+			}
+			.projetos__body{
+				display: flex;
+				flex-direction: column;
+			    
+			    overflow: hidden;
+			    box-sizing: border-box;
+
+			    @media( min-width: 992px){
+				    padding: 0rem;
+					height: 0;	
+			    }
+				
+			 	transition: 0.3s all ease-in-out;
+
+				h4,h5,h6{
+					line-height: 1.5em;
+				}
+				.projetos__body__action{
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+				}
+			}
+		}
+
+	}
+}
