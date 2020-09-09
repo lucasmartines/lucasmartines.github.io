@@ -9,13 +9,21 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="./style/css/style.css">
+	<link rel="stylesheet" href="./portfolio_2020/style/css/style.css">
 </head>
 <body>
 	
 	<header class="header">
 
 		<div class="container">
-
+			   <nav class="nav">
+		            <ul>
+		            	<li><a target="_blank" href="https://github.com/lucasmartines">Git Hub</a></li>
+		                <li>
+		                    <a target="_blank" class="btn" href="/curriculo">Meu currículo</a>
+		                </li>
+		            </ul>
+		        </nav>
 			<div class="row">
 				<div class="header__content col-xl-8 col-lg-6 col-md-6 col-sm-12 order-md-0">
 					<h1 >Lucas Martines Alcantarilla</h1>
@@ -63,8 +71,8 @@
 				 	<div class="card-body projetos__body">
 						<h5>Projeto Brafé</h5>
 						<div class="projetos__body__action">
-							<a href="#" class="btn btn-my_primary">Código</a>
-							<a href="#" class="btn btn-my_secondary">Url</a>
+							<a target="_blank" href="#" class="btn btn-my_primary">Código</a>
+							<a target="_blank" href="#" class="btn btn-my_secondary">Url</a>
 						</div>
 					</div>
 				</div>
@@ -79,8 +87,8 @@
 				 	<div class="card-body projetos__body">
 						<h5>Projeto API Java</h5>
 						<div class="projetos__body__action">
-							<a href="#" class="btn btn-my_primary">Código</a>
-							<a href="#" class="btn btn-my_secondary">Url</a>
+							<a target="_blank" href="#" class="btn btn-my_primary">Código</a>
+							<a  target="_blank" href="#" class="btn btn-my_secondary">Url</a>
 						</div>
 					</div>
 				</div>
@@ -95,14 +103,14 @@
 				 	<div class="card-body projetos__body">
 						<h5>BugTracker em React+Redux</h5>
 						<div class="projetos__body__action">
-							<a href="#" class="btn btn-my_primary">Código</a>
-							<a href="#" class="btn btn-my_secondary">Url</a>
+							<a target="_blank" href="#" class="btn btn-my_primary">Código</a>
+							<a target="_blank" href="#" class="btn btn-my_secondary">Url</a>
 						</div>
 					</div>
 				</div>
 			</div>
 
-		</div>
+		</div> <!-- ./row -->
 
 		<div class="row projetos">
 
@@ -111,13 +119,13 @@
 				<div class="card">
 				<!-- <di v class="card-img-top">-->
 
-				     <img src="https://lucasmartines.github.io/img/portfolio1.png" alt="...">	
+				     <img src="img/music_app.png" alt="...">	
 				<!-- </div> -->
 				 	<div class="card-body projetos__body">
-						<h5>Projeto Brafé</h5>
+						<h5>Projeto de Música Java</h5>
 						<div class="projetos__body__action">
-							<a href="#" class="btn btn-my_primary">Código</a>
-							<a href="#" class="btn btn-my_secondary">Url</a>
+							<a target="_blank" href="#" class="btn btn-my_primary">Código</a>
+							<a target="_blank" href="#" class="btn btn-my_secondary">Url</a>
 						</div>
 					</div>
 				</div>
@@ -127,13 +135,13 @@
 				<div class="card">
 				<!-- <di v class="card-img-top">-->
 
-				     <img src="img/Api Swagger.png" alt="...">	
+				     <img src="img/blog 2.png" alt="...">	
 				<!-- </div> -->
 				 	<div class="card-body projetos__body">
-						<h5>Projeto API Java</h5>
+						<h5>Blog Laravel</h5>
 						<div class="projetos__body__action">
-							<a href="#" class="btn btn-my_primary">Código</a>
-							<a href="#" class="btn btn-my_secondary">Url</a>
+							<a target="_blank" href="#" class="btn btn-my_primary">Código</a>
+							<a target="_blank" href="#" class="btn btn-my_secondary">Url</a>
 						</div>
 					</div>
 				</div>
@@ -143,13 +151,13 @@
 				<div class="card">
 				<!-- <di v class="card-img-top">-->
 
-				     <img src="img/bug.png" alt="...">	
+				     <img src="img/blog_react.png" alt="...">	
 				<!-- </div> -->
 				 	<div class="card-body projetos__body">
-						<h5>BugTracker em React+Redux</h5>
+						<h5>Protótipo Blog React + Firebase</h5>
 						<div class="projetos__body__action">
-							<a href="#" class="btn btn-my_primary">Código</a>
-							<a href="#" class="btn btn-my_secondary">Url</a>
+							<a target="_blank" href="#" class="btn btn-my_primary">Código</a>
+							<a target="_blank" href="#" class="btn btn-my_secondary">Url</a>
 						</div>
 					</div>
 				</div>
@@ -285,14 +293,24 @@
 			<form class="  ">
 					<input 
 						placeholder="Seu Nome" 
-						type="text" class="form-control mb-2">
+						type="text" 
+						class="form-control mb-2"
+						id="form-name">
 					<input 
 						placeholder="Seu Email" 
-						type="text" class="form-control mb-2">
+						type="text" 
+						class="form-control mb-2"
+						id="form-email">
 					<textarea  
-						type="text" class="form-control mb-2" placeholder="Sua Mensagem"></textarea>
+						type="text"
+						class="form-control mb-2"
+						placeholder="Sua Mensagem"
+						id="form-content"></textarea>
 					<div>
-						<button type="submit" class="btn ">
+						<button 
+							type="submit"
+							class="btn"
+							onclick="submitForm()" >
 							<i class="fa fa-paper-plane"></i>
 						Enviar</button>
 					</div>
@@ -315,7 +333,10 @@
 					<p class="cta-section__text">  Em meu currículo tenho mais informações sobre mim!</p>
 				</div>
 				<div class="col-md-4 col-12 cta-section__row__cta">
-					<button class="btn-cta">Ver Meu Curriculo</button>
+					<div class="text-right">
+						<a target="_blank" href="/curriculo" class="btn-cta ml-auto">Ver Meu Curriculo</a>	
+					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -340,14 +361,17 @@
 	<div class="contato">
 		<ul>
 			<li>
-				<a href="" class="icon  btn-cta">
+				<a href="https://www.facebook.com/lucas.martines.3158" class="icon  btn-cta">
 					<i class="fa fa-facebook "></i>
 				</a>
-				<a href="" class="icon btn-cta">
+				<a href="https://www.linkedin.com/in/lucas-martiness/" class="icon btn-cta">
 					<i class="fa fa-linkedin "></i>
 				</a>
-				<a href="" class="icon btn-cta">
+				<a href="https://api.whatsapp.com/send?phone=5511966342284" class="icon btn-cta">
 					<i class="fa fa-whatsapp "></i>
+				</a>
+				<a href="https://www.behance.net/lucasalcan6fcb" class="icon btn-cta">
+					<i class="fa fa-behance "></i>
 				</a>
 			</li>
 		</ul>
@@ -356,5 +380,40 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+
+	<script>
+		
+
+		function submitForm( )
+        {
+            
+            let name = $("#form-name").val();
+            let email= $("#form-email").val();
+            let content= $("#form-content").val();
+
+            $('.form-submit button').attr('disabled','disabled');
+
+            
+            $.ajax({
+                'method':'POST',
+                 'url':"https://app-estudo-temporario.herokuapp.com/sendEmail",
+                //  'url':"http://127.0.0.1:8000/sendEmail",
+                data:{
+                    'name':name,
+                    'email':email,
+                    'content':content
+                },
+                success: function(response){
+                    alert("Mensagem enviada com sucesso");
+                    $('.form-submit button').removeAttr('disabled');
+                },
+                error: function(response){
+                    alert("Erro ao enviar a mensagem!");
+                    console.log(response)
+                    $('.form-submit button').removeAttr('disabled');
+                }
+            })
+        }
+	</script>
 </body>
 </html>

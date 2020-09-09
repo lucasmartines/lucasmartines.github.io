@@ -4,8 +4,13 @@
 
 
 
-$my_primary:#A43DF4;
-$my_secondary: #6836FF;
+$my_primary:#6836FF;
+//$my_primary: #f52cd4;
+
+$my_secondary: #ad33f7;
+//$my_secondary: #6836FF;
+
+
 $my_text-dark: #333;
 $my_text-light: white;
 
@@ -17,7 +22,7 @@ body{
 	width: 108%!important;
 }
 .btn-cta{
-	display: block;
+	display: inline-block;
 	background: transparent;
 	color:$my_primary;
 	padding: 15px 30px;
@@ -25,6 +30,9 @@ body{
 	border-radius: 10px;
 	transition: 0.3s all ease-in;
 
+
+	max-width: 220px;
+    text-align: center;
 	&:hover{
 		color: $my_secondary;
 		border-color: $my_secondary;
@@ -36,9 +44,9 @@ body{
     border-color: $my_primary;
     border: 2px solid;
     &:hover , &:focus , &:active{
-    	color: #333;
+    	color: $my_primary;
     	background-color: transparent;
-    	border-color:$my_primary;
+    	border-color: currentColor;
     }
 }
 
@@ -56,6 +64,15 @@ body{
 
 *{
 	font-family: Poppins;
+}
+a{
+    color: $my_primary;
+    text-decoration: none;
+    background-color: transparent;
+    &:hover{
+		color: $my_secondary;
+		text-decoration: none;
+	}
 }
 
 .img{
@@ -103,3 +120,4 @@ img{
 @import "./_contato.scss";
 @import "./_formulario.scss";
 @import "./_footer.scss";
+@import "./_nav.scss";
